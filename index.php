@@ -64,7 +64,7 @@ if(!isset($_SESSION['loginname']))
                     <div class="col-md-4">
                         
                         <div class="menu-item blue">
-                            <a href="ireport2/">
+                            <a href="ireport/">
                                 <i class="fa fa-magic"></i>
                                 <p>I REPORT</p>
                             </a>
