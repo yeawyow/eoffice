@@ -88,23 +88,23 @@ if(!isset($_SESSION['loginname']))
                     
                     <div class="col-md-4">
                                 <div class="menu-item color">
-                                    <a href="service/">
+                                    <a href="service_com/">
                                         <i class="fa fa-wrench"></i>
                                         <p>แจ้งซ่อม</p>
                                     </a>
                                 </div>
                             
                                 <div class="menu-item light-orange">
-                                    <a href="asests_airhos/" >
+                                    <a href="" >
                                         <i class="fa fa-institution"></i>
                                         <p>โปรแกรมพัสดุ</p>
                                     </a>
                             </div>
 
                                 <div class="menu-item purple">
-                                    <a href="#pricing-modal" data-toggle="modal">
+                                    <a href="insurance/" data-toggle="modal">
                                         <i class="fa fa-usd"></i>
-                                        <p>Pricing</p>
+                                        <p>งานประกันสุขภาพ</p>
                                     </a>
                             </div>                        
                     </div>
@@ -112,9 +112,9 @@ if(!isset($_SESSION['loginname']))
                     <div class="col-md-4">
                         
                         <div class="menu-item light-red">
-                            <a href="#contact-modal" data-toggle="modal">
+                            <a href="indicator_app/" data-toggle="modal">
                                 <i class="fa fa-users"></i>
-                                <p>ระบบข้อมูลบุคลากร</p>
+                                <p>ระบบตัวชี้วัดหน่วยงาน</p>
                             </a>
                         </div>
                         

@@ -1,126 +1,115 @@
 <?php
 session_start();
-if(!isset($_SESSION['loginname']))
-{
-   
-        echo "<script> window.location.replace('login.php') </script>" ;
+if (!isset($_SESSION['loginname'])) {
+
+    echo "<script> window.location.replace('login.php') </script>";
 }
 
 include_once '../lib/config.inc.php';
 $Db = new MySqlConn;
 $Db2 = new MySqlConn2;
 ?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>ระบบรายงาน I REPORT</title>
-
-  <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
-<meta name="robots" content="noindex">
-<!-- progress CSS 
-<link rel="stylesheet" href="../includes/progess/css/jquery.progresstimer.css">-->
-<!-- Material Design Icons  -->
-<link href="assets/css/material.css" rel="stylesheet">
+    <head>
+        <meta charset="utf-8">
+        <title>Bootswatch: Cerulean</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <link rel="stylesheet" href="theme/css/bootstrap31.css" media="screen">
+        <link href="../includes/bootstrap-datepicker/css/datepicker.css" rel="stylesheet">
+        <link href="theme/css/main.css" rel="stylesheet">
+        <link href="../includes/DataTables-1.10.13/css/dataTables.bootstrap.min.css" rel="stylesheet">
 
 
+        <script src="../includes/jquery-3.1.1.min.js"></script>
+        <script src="theme/js/bootstrap.min.js"></script>
+        <script src="../includes/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+        <script src="../includes/bootstrap-datepicker/js/bootstrap-datepicker-thai.js"></script>
+        <script src="../includes/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" charset="UTF-8"></script>
+        <script src=" ../includes/DataTables-1.10.13/js/jquery.dataTables.min.js"></script>
+        <script src="../includes/DataTables-1.10.13/js/dataTables.bootstrap.min.js"></script>
+        <script src="../includes/validator/jquery.validate.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">ระบบรายงาน IREPORT รพ.อากาศอำนวย</a>
+                </div>
 
-<!-- MDK -->
-<link type="text/css" href="assets/vendor/material-design-kit.css" rel="stylesheet">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายงานฝ่ายเภสัช <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
 
-<!-- Sidebar Collapse -->
-<link type="text/css" href="assets/vendor/sidebar-collapse.min.css" rel="stylesheet">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายงานแพทย์แผนไทย <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="?m=thaimedicine&p=drug_using_herbs">รายงานการใช้ยาสมุนไพร</a></li>
 
-<!-- App CSS -->
-<link type="text/css" href="assets/css/style.min.css" rel="stylesheet">
+                                <li role="separator" class="divider"></li>
 
-  
-<!-- Vendor CSS -->
-<link rel="stylesheet" href="assets/css/morris.min.css">
-<!-- Vendor CSS -->
-<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+                            </ul>
+                        </li>
+                          <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">รายงานแพทย์แผนไทย <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="?m=thaimedicine&p=drug_using_herbs">รายงานผลแล็ป</a></li>
 
- <!-- Datepicker -->
- <link rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
- 
+                                <li role="separator" class="divider"></li>
 
-</head>
-<body class="ls-top-navbar">
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <div class="row">
+            <div class="container">
 
-  <!-- Navbar -->
-<nav class="navbar navbar-dark bg-primary navbar-full navbar-fixed-top">
-
-	<!-- Toggle sidebar -->
-	<button class="navbar-toggler" type="button" data-toggle="sidebar"></button>
-
-	<!-- Brand -->
-	<a href="" class="navbar-brand"><i class="material-icons">IREPORT</i> ระบบรายงานออนไลน์ รพ.อากาศอำนวย</a>
-
-
-
-	<div class="navbar-spacer"></div>
-	
-	<!-- Menu --> 
-	<ul class="nav navbar-nav hidden-sm-down">
-		<li class="nav-item">
-			<a class="nav-link" href=""></a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href=""></a>
-		</li>
-	</ul>
-
-	<!-- Menu -->
-	<ul class="nav navbar-nav">
-		<!-- User dropdown -->
-<li class="nav-item dropdown">
-    <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"></a>
-  <div class="dropdown-menu dropdown-menu-right" aria-labelledby="Preview">
-    <a class="dropdown-item" href="fixed-instructor-account-edit.html">
-      <i class="material-icons">edit</i> Edit Account
-    </a>
-    <a class="dropdown-item" href="fixed-instructor-profile.html">
-      <i class="material-icons">person</i> Public Profile
-    </a>
-      <a class="dropdown-item" href="../index.php">
-      <i class="material-icons">lock</i> กลับหน้าแรก
-    </a>
-  </div>
-</li>
-<!-- // END User dropdown -->
-	</ul>
-</nav>
-<!-- // END Navbar -->
-   <!-- jQuery -->
-<script src="assets/vendor/jquery.min.js"></script>
-
-<!-- Bootstrap -->
-<script src="assets/vendor/tether.min.js"></script>
-<script src="assets/vendor/bootstrap.min.js"></script>
-
-<!-- MDK -->
-<script src="assets/vendor/dom-factory.js"></script>
-<script src="assets/vendor/material-design-kit.js"></script>
-
-<!-- Sidebar Collapse -->
-<script src="assets/vendor/sidebar-collapse.js"></script>
-
-<!-- App JS -->
-<script src="assets/vendor/main.min.js"></script>
-
-  <!-- progressbar -->
-  <script src="../includes/progess/js/jquery.progresstimer.js"></script>
-
-<!-- datepicker -->
-<script src="assets/datepicker/bootstrap-datepicker.js"></script>
-<script src="assets/datepicker/bootstrap-datepicker-thai.js"></script>
-<script src="assets/datepicker/locales/bootstrap-datepicker.th.js"></script>
-
-  <div class="container">
-    
-   <?php
+                <?php
 // Application 
                 $app = (isset($_GET['m']) ? $_GET['m'] : 'main');
                 $file = (isset($_GET['p']) ? $_GET['p'] : 'default');
@@ -131,42 +120,36 @@ $Db2 = new MySqlConn2;
                     echo '404,ไม่พบหน้าที่ท่านเรียก';
                 }
                 ?>
-   
-    <div class="footer">
-    
-    </div>
-  </div>
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
 
-  <!-- Sidebar -->
-<div class="mdk-drawer mdk-js-drawer" id="default-drawer">
-  <div class="mdk-drawer__content ls-top-navbar-xs-up">
-    <div class="sidebar sidebar-left sidebar-light bg-white sidebar-p-y">
-     
-     
-     
-      <!-- Components menu -->
-<div class="sidebar-heading">ถ้าท่านต้องการรายงานเพิ่มเติมกรุณาติดต่อ ADMIN</div>
-<ul class="sidebar-menu">
-  <li class="sidebar-menu-item">
-    <a class="sidebar-menu-button sidebar-js-collapse" href="#">
-      <i class="sidebar-menu-icon material-icons">tune</i> เภสัชกรรม
-    </a>
-    <ul class="sidebar-submenu sm-condensed">
-      <li class="sidebar-menu-item">
-        <a class="sidebar-menu-button" href="?m=drug_report&p=drug_using_herbs">ข้อมูลการใช้ยาสมุนไพร</a>
-      </li>
-    
-    </ul>
-  </li>
-</ul>
-<!-- // END Components Menu -->
-    </div>
-  </div>
-</div>
 
-<!-- // END Sidebar -->
 
-  
+                </div>
+            </div>
 
-</body>
+        </footer>
+
+
+
+
+
+
+        <script type="text/javascript">
+
+
+            //date_piker
+            $('.input-daterange').datepicker({
+                autoclose: true,
+                language: "th-th",
+                format: 'yyyy-mm-dd',
+                todayHighlight: true
+
+            });
+        </script>
+    </body>
 </html>
+

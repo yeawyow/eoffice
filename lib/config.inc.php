@@ -6,9 +6,9 @@ define("password", "48172520914072529mM");
 define("db", "airoffice");
 
 
-define("host2", "192.168.2.5");
-define("username2", "sa");
-define("password2", "sa");
+define("host2", "192.168.2.11");
+define("username2","sa");
+define("password2","sa");
 define("db2", "hos");
 
 class MySqlConn {
