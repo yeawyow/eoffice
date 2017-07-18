@@ -1696,7 +1696,7 @@
 
     <!-- WIDGETS -->
 
-<script type="text/javascript" src="../../assets/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../includes/bootstrap-3.3.7/bootstrap.min.js"></script>
 
 <!-- Bootstrap Dropdown -->
 
