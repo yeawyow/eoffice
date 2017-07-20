@@ -1,293 +1,976 @@
-<!--breadcrumbs-->
-  <div id="content-header">
-    <div id="breadcrumb"> <a href="index.html" title="Go to Home" class="tip-bottom"><i class="icon-home"></i> Home</a></div>
-  </div>
-<!--End-breadcrumbs-->
+<div class="ace-settings-container" id="ace-settings-container">
+							<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+								<i class="ace-icon fa fa-cog bigger-130"></i>
+							</div>
 
-<!--Action boxes-->
-  <div class="container-fluid">
-    <div class="quick-actions_homepage">
-      <ul class="quick-actions">
-        <li class="bg_lb"> <a href="index.html"> <i class="icon-dashboard"></i> <span class="label label-important">20</span> My Dashboard </a> </li>
-        <li class="bg_lg span3"> <a href="charts.html"> <i class="icon-signal"></i> Charts</a> </li>
-        <li class="bg_ly"> <a href="widgets.html"> <i class="icon-inbox"></i><span class="label label-success">101</span> Widgets </a> </li>
-        <li class="bg_lo"> <a href="tables.html"> <i class="icon-th"></i> Tables</a> </li>
-        <li class="bg_ls"> <a href="grid.html"> <i class="icon-fullscreen"></i> Full width</a> </li>
-        <li class="bg_lo span3"> <a href="form-common.html"> <i class="icon-th-list"></i> Forms</a> </li>
-        <li class="bg_ls"> <a href="buttons.html"> <i class="icon-tint"></i> Buttons</a> </li>
-        <li class="bg_lb"> <a href="interface.html"> <i class="icon-pencil"></i>Elements</a> </li>
-        <li class="bg_lg"> <a href="calendar.html"> <i class="icon-calendar"></i> Calendar</a> </li>
-        <li class="bg_lr"> <a href="error404.html"> <i class="icon-info-sign"></i> Error</a> </li>
+							<div class="ace-settings-box clearfix" id="ace-settings-box">
+								<div class="pull-left width-50">
+									<div class="ace-settings-item">
+										<div class="pull-left">
+											<select id="skin-colorpicker" class="hide">
+												<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+												<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+												<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+												<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+											</select>
+										</div>
+										<span>&nbsp; Choose Skin</span>
+									</div>
 
-      </ul>
-    </div>
-<!--End-Action boxes-->    
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" />
+										<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
+									</div>
 
-<!--Chart-box-->    
-    <div class="row-fluid">
-      <div class="widget-box">
-        <div class="widget-title bg_lg"><span class="icon"><i class="icon-signal"></i></span>
-          <h5>Site Analytics</h5>
-        </div>
-        <div class="widget-content" >
-          <div class="row-fluid">
-            <div class="span9">
-              <div class="chart"></div>
-            </div>
-            <div class="span3">
-              <ul class="site-stats">
-                <li class="bg_lh"><i class="icon-user"></i> <strong>2540</strong> <small>Total Users</small></li>
-                <li class="bg_lh"><i class="icon-plus"></i> <strong>120</strong> <small>New Users </small></li>
-                <li class="bg_lh"><i class="icon-shopping-cart"></i> <strong>656</strong> <small>Total Shop</small></li>
-                <li class="bg_lh"><i class="icon-tag"></i> <strong>9540</strong> <small>Total Orders</small></li>
-                <li class="bg_lh"><i class="icon-repeat"></i> <strong>10</strong> <small>Pending Orders</small></li>
-                <li class="bg_lh"><i class="icon-globe"></i> <strong>8540</strong> <small>Online Orders</small></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-<!--End-Chart-box--> 
-    <hr/>
-    <div class="row-fluid">
-      <div class="span6">
-        <div class="widget-box">
-          <div class="widget-title bg_ly" data-toggle="collapse" href="#collapseG2"><span class="icon"><i class="icon-chevron-down"></i></span>
-            <h5>Latest Posts</h5>
-          </div>
-          <div class="widget-content nopadding collapse in" id="collapseG2">
-            <ul class="recent-posts">
-              <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av1.jpg"> </div>
-                <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
-                  <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
-                </div>
-              </li>
-              <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av2.jpg"> </div>
-                <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
-                  <p><a href="#">This is a much longer one that will go on for a few lines.It has multiple paragraphs and is full of waffle to pad out the comment.</a> </p>
-                </div>
-              </li>
-              <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av4.jpg"> </div>
-                <div class="article-post"> <span class="user-info"> By: john Deo / Date: 2 Aug 2012 / Time:09:27 AM </span>
-                  <p><a href="#">This is a much longer one that will go on for a few lines.Itaffle to pad out the comment.</a> </p>
-                </div>
-              <li>
-                <button class="btn btn-warning btn-mini">View All</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="widget-box">
-          <div class="widget-title"> <span class="icon"><i class="icon-ok"></i></span>
-            <h5>To Do list</h5>
-          </div>
-          <div class="widget-content">
-            <div class="todo">
-              <ul>
-                <li class="clearfix">
-                  <div class="txt"> Luanch This theme on Themeforest <span class="by label">Alex</span></div>
-                  <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                </li>
-                <li class="clearfix">
-                  <div class="txt"> Manage Pending Orders <span class="date badge badge-warning">Today</span> </div>
-                  <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                </li>
-                <li class="clearfix">
-                  <div class="txt"> MAke your desk clean <span class="by label">Admin</span></div>
-                  <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                </li>
-                <li class="clearfix">
-                  <div class="txt"> Today we celebrate the theme <span class="date badge badge-info">08.03.2013</span> </div>
-                  <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                </li>
-                <li class="clearfix">
-                  <div class="txt"> Manage all the orders <span class="date badge badge-important">12.03.2013</span> </div>
-                  <div class="pull-right"> <a class="tip" href="#" title="Edit Task"><i class="icon-pencil"></i></a> <a class="tip" href="#" title="Delete"><i class="icon-remove"></i></a> </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="widget-box">
-          <div class="widget-title"> <span class="icon"><i class="icon-ok"></i></span>
-            <h5>Progress Box</h5>
-          </div>
-          <div class="widget-content">
-            <ul class="unstyled">
-              <li> <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 81% Clicks <span class="pull-right strong">567</span>
-                <div class="progress progress-striped ">
-                  <div style="width: 81%;" class="bar"></div>
-                </div>
-              </li>
-              <li> <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 72% Uniquie Clicks <span class="pull-right strong">507</span>
-                <div class="progress progress-success progress-striped ">
-                  <div style="width: 72%;" class="bar"></div>
-                </div>
-              </li>
-              <li> <span class="icon24 icomoon-icon-arrow-down-2 red"></span> 53% Impressions <span class="pull-right strong">457</span>
-                <div class="progress progress-warning progress-striped ">
-                  <div style="width: 53%;" class="bar"></div>
-                </div>
-              </li>
-              <li> <span class="icon24 icomoon-icon-arrow-up-2 green"></span> 3% Online Users <span class="pull-right strong">8</span>
-                <div class="progress progress-danger progress-striped ">
-                  <div style="width: 3%;" class="bar"></div>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="widget-box">
-          <div class="widget-title bg_lo"  data-toggle="collapse" href="#collapseG3" > <span class="icon"> <i class="icon-chevron-down"></i> </span>
-            <h5>News updates</h5>
-          </div>
-          <div class="widget-content nopadding updates collapse in" id="collapseG3">
-            <div class="new-update clearfix"><i class="icon-ok-sign"></i>
-              <div class="update-done"><a title="" href="#"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</strong></a> <span>dolor sit amet, consectetur adipiscing eli</span> </div>
-              <div class="update-date"><span class="update-day">20</span>jan</div>
-            </div>
-            <div class="new-update clearfix"> <i class="icon-gift"></i> <span class="update-notice"> <a title="" href="#"><strong>Congratulation Maruti, Happy Birthday </strong></a> <span>many many happy returns of the day</span> </span> <span class="update-date"><span class="update-day">11</span>jan</span> </div>
-            <div class="new-update clearfix"> <i class="icon-move"></i> <span class="update-alert"> <a title="" href="#"><strong>Maruti is a Responsive Admin theme</strong></a> <span>But already everything was solved. It will ...</span> </span> <span class="update-date"><span class="update-day">07</span>Jan</span> </div>
-            <div class="new-update clearfix"> <i class="icon-leaf"></i> <span class="update-done"> <a title="" href="#"><strong>Envato approved Maruti Admin template</strong></a> <span>i am very happy to approved by TF</span> </span> <span class="update-date"><span class="update-day">05</span>jan</span> </div>
-            <div class="new-update clearfix"> <i class="icon-question-sign"></i> <span class="update-notice"> <a title="" href="#"><strong>I am alwayse here if you have any question</strong></a> <span>we glad that you choose our template</span> </span> <span class="update-date"><span class="update-day">01</span>jan</span> </div>
-          </div>
-        </div>
-        
-      </div>
-      <div class="span6">
-        <div class="widget-box widget-chat">
-          <div class="widget-title bg_lb"> <span class="icon"> <i class="icon-comment"></i> </span>
-            <h5>Chat Option</h5>
-          </div>
-          <div class="widget-content nopadding collapse in" id="collapseG4">
-            <div class="chat-users panel-right2">
-              <div class="panel-title">
-                <h5>Online Users</h5>
-              </div>
-              <div class="panel-content nopadding">
-                <ul class="contact-list">
-                  <li id="user-Alex" class="online"><a href=""><img alt="" src="img/demo/av1.jpg" /> <span>Alex</span></a></li>
-                  <li id="user-Linda"><a href=""><img alt="" src="img/demo/av2.jpg" /> <span>Linda</span></a></li>
-                  <li id="user-John" class="online new"><a href=""><img alt="" src="img/demo/av3.jpg" /> <span>John</span></a><span class="msg-count badge badge-info">3</span></li>
-                  <li id="user-Mark" class="online"><a href=""><img alt="" src="img/demo/av4.jpg" /> <span>Mark</span></a></li>
-                  <li id="user-Maxi" class="online"><a href=""><img alt="" src="img/demo/av5.jpg" /> <span>Maxi</span></a></li>
-                </ul>
-              </div>
-            </div>
-            <div class="chat-content panel-left2">
-              <div class="chat-messages" id="chat-messages">
-                <div id="chat-messages-inner"></div>
-              </div>
-              <div class="chat-message well">
-                <button class="btn btn-success">Send</button>
-                <span class="input-box">
-                <input type="text" name="msg-box" id="msg-box" />
-                </span> </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget-box">
-          <div class="widget-title"><span class="icon"><i class="icon-user"></i></span>
-            <h5>Our Partner (Box with Fix height)</h5>
-          </div>
-          <div class="widget-content nopadding fix_hgt">
-            <ul class="recent-posts">
-              <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av1.jpg"> </div>
-                <div class="article-post"> <span class="user-info">John Deo</span>
-                  <p>Web Desginer &amp; creative Front end developer</p>
-                </div>
-              </li>
-              <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av2.jpg"> </div>
-                <div class="article-post"> <span class="user-info">John Deo</span>
-                  <p>Web Desginer &amp; creative Front end developer</p>
-                </div>
-              </li>
-              <li>
-                <div class="user-thumb"> <img width="40" height="40" alt="User" src="img/demo/av4.jpg"> </div>
-                <div class="article-post"> <span class="user-info">John Deo</span>
-                  <p>Web Desginer &amp; creative Front end developer</p>
-                </div>
-            </ul>
-          </div>
-        </div>
-        <div class="accordion" id="collapse-group">
-          <div class="accordion-group widget-box">
-            <div class="accordion-heading">
-              <div class="widget-title"> <a data-parent="#collapse-group" href="#collapseGOne" data-toggle="collapse"> <span class="icon"><i class="icon-magnet"></i></span>
-                <h5>Accordion Example 1</h5>
-                </a> </div>
-            </div>
-            <div class="collapse in accordion-body" id="collapseGOne">
-              <div class="widget-content"> It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </div>
-            </div>
-          </div>
-          <div class="accordion-group widget-box">
-            <div class="accordion-heading">
-              <div class="widget-title"> <a data-parent="#collapse-group" href="#collapseGTwo" data-toggle="collapse"> <span class="icon"><i class="icon-magnet"></i></span>
-                <h5>Accordion Example 2</h5>
-                </a> </div>
-            </div>
-            <div class="collapse accordion-body" id="collapseGTwo">
-              <div class="widget-content">And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.</div>
-            </div>
-          </div>
-          <div class="accordion-group widget-box">
-            <div class="accordion-heading">
-              <div class="widget-title"> <a data-parent="#collapse-group" href="#collapseGThree" data-toggle="collapse"> <span class="icon"><i class="icon-magnet"></i></span>
-                <h5>Accordion Example 3</h5>
-                </a> </div>
-            </div>
-            <div class="collapse accordion-body" id="collapseGThree">
-              <div class="widget-content"> Waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just </div>
-            </div>
-          </div>
-        </div>
-        <div class="widget-box collapsible">
-          <div class="widget-title"> <a data-toggle="collapse" href="#collapseOne"> <span class="icon"><i class="icon-arrow-right"></i></span>
-            <h5>Toggle, Open by default, </h5>
-            </a> </div>
-          <div id="collapseOne" class="collapse in">
-            <div class="widget-content"> This box is opened by default, paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end. </div>
-          </div>
-          <div class="widget-title"> <a data-toggle="collapse" href="#collapseTwo"> <span class="icon"><i class="icon-remove"></i></span>
-            <h5>Toggle, closed by default</h5>
-            </a> </div>
-          <div id="collapseTwo" class="collapse">
-            <div class="widget-content"> This box is now open </div>
-          </div>
-          <div class="widget-title"> <a data-toggle="collapse" href="#collapseThree"> <span class="icon"><i class="icon-remove"></i></span>
-            <h5>Toggle, closed by default</h5>
-            </a> </div>
-          <div id="collapseThree" class="collapse">
-            <div class="widget-content"> This box is now open </div>
-          </div>
-        </div>
-        <div class="widget-box">
-          <div class="widget-title">
-            <ul class="nav nav-tabs">
-              <li class="active"><a data-toggle="tab" href="#tab1">Tab1</a></li>
-              <li><a data-toggle="tab" href="#tab2">Tab2</a></li>
-              <li><a data-toggle="tab" href="#tab3">Tab3</a></li>
-            </ul>
-          </div>
-          <div class="widget-content tab-content">
-            <div id="tab1" class="tab-pane active">
-              <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment.</p>
-              <img src="img/demo/demo-image1.jpg" alt="demo-image"/></div>
-            <div id="tab2" class="tab-pane"> <img src="img/demo/demo-image2.jpg" alt="demo-image"/>
-              <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment.</p>
-            </div>
-            <div id="tab3" class="tab-pane">
-              <p>And is full of waffle to It has multiple paragraphs and is full of waffle to pad out the comment. Usually, you just wish these sorts of comments would come to an end.multiple paragraphs and is full of waffle to pad out the comment. </p>
-              <img src="img/demo/demo-image3.jpg" alt="demo-image"/></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
+										<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
+										<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" autocomplete="off" />
+										<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
+										<label class="lbl" for="ace-settings-add-container">
+											Inside
+											<b>.container</b>
+										</label>
+									</div>
+								</div><!-- /.pull-left -->
+
+								<div class="pull-left width-50">
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
+										<label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
+										<label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
+									</div>
+
+									<div class="ace-settings-item">
+										<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
+										<label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+									</div>
+								</div><!-- /.pull-left -->
+							</div><!-- /.ace-settings-box -->
+						</div><!-- /.ace-settings-container -->
+
+						<div class="page-header">
+							<h1>
+								Inbox
+								<small>
+									<i class="ace-icon fa fa-angle-double-right"></i>
+									Mailbox with some customizations as described in docs
+								</small>
+							</h1>
+						</div><!-- /.page-header -->
+
+						<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+								<div class="row">
+									<div class="col-xs-12">
+										<div class="tabbable">
+											<ul id="inbox-tabs" class="inbox-tabs nav nav-tabs padding-16 tab-size-bigger tab-space-1">
+												<li class="li-new-mail pull-right">
+													<a data-toggle="tab" href="#write" data-target="write" class="btn-new-mail">
+														<span class="btn btn-purple no-border">
+															<i class="ace-icon fa fa-envelope bigger-130"></i>
+															<span class="bigger-110">Write Mail</span>
+														</span>
+													</a>
+												</li><!-- /.li-new-mail -->
+
+												<li class="active">
+													<a data-toggle="tab" href="#inbox" data-target="inbox">
+														<i class="blue ace-icon fa fa-inbox bigger-130"></i>
+														<span class="bigger-110">Inbox</span>
+													</a>
+												</li>
+
+												<li>
+													<a data-toggle="tab" href="#sent" data-target="sent">
+														<i class="orange ace-icon fa fa-location-arrow bigger-130"></i>
+														<span class="bigger-110">Sent</span>
+													</a>
+												</li>
+
+												<li>
+													<a data-toggle="tab" href="#draft" data-target="draft">
+														<i class="green ace-icon fa fa-pencil bigger-130"></i>
+														<span class="bigger-110">Draft</span>
+													</a>
+												</li>
+
+												<li class="dropdown">
+													<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+														<i class="pink ace-icon fa fa-tags bigger-130"></i>
+
+														<span class="bigger-110">
+															Tags
+															<i class="ace-icon fa fa-caret-down"></i>
+														</span>
+													</a>
+
+													<ul class="dropdown-menu dropdown-light-blue dropdown-125">
+														<li>
+															<a data-toggle="tab" href="#tag-1">
+																<span class="mail-tag badge badge-pink"></span>
+																<span class="pink">Tag#1</span>
+															</a>
+														</li>
+
+														<li>
+															<a data-toggle="tab" href="#tag-family">
+																<span class="mail-tag badge badge-success"></span>
+																<span class="green">Family</span>
+															</a>
+														</li>
+
+														<li>
+															<a data-toggle="tab" href="#tag-friends">
+																<span class="mail-tag badge badge-info"></span>
+																<span class="blue">Friends</span>
+															</a>
+														</li>
+
+														<li>
+															<a data-toggle="tab" href="#tag-work">
+																<span class="mail-tag badge badge-grey"></span>
+																<span class="grey">Work</span>
+															</a>
+														</li>
+													</ul>
+												</li><!-- /.dropdown -->
+											</ul>
+
+											<div class="tab-content no-border no-padding">
+												<div id="inbox" class="tab-pane in active">
+													<div class="message-container">
+														<div id="id-message-list-navbar" class="message-navbar clearfix">
+															<div class="message-bar">
+																<div class="message-infobar" id="id-message-infobar">
+																	<span class="blue bigger-150">Inbox</span>
+																	<span class="grey bigger-110">(2 unread messages)</span>
+																</div>
+
+																<div class="message-toolbar hide">
+																	<div class="inline position-relative align-left">
+																		<button type="button" class="btn-white btn-primary btn btn-xs dropdown-toggle" data-toggle="dropdown">
+																			<span class="bigger-110">Action</span>
+
+																			<i class="ace-icon fa fa-caret-down icon-on-right"></i>
+																		</button>
+
+																		<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-mail-reply blue"></i>&nbsp; Reply
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-mail-forward green"></i>&nbsp; Forward
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-folder-open orange"></i>&nbsp; Archive
+																				</a>
+																			</li>
+
+																			<li class="divider"></li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-eye blue"></i>&nbsp; Mark as read
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-eye-slash green"></i>&nbsp; Mark unread
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-flag-o red"></i>&nbsp; Flag
+																				</a>
+																			</li>
+
+																			<li class="divider"></li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-trash-o red bigger-110"></i>&nbsp; Delete
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+
+																	<div class="inline position-relative align-left">
+																		<button type="button" class="btn-white btn-primary btn btn-xs dropdown-toggle" data-toggle="dropdown">
+																			<i class="ace-icon fa fa-folder-o bigger-110 blue"></i>
+																			<span class="bigger-110">Move to</span>
+
+																			<i class="ace-icon fa fa-caret-down icon-on-right"></i>
+																		</button>
+
+																		<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-stop pink2"></i>&nbsp; Tag#1
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-stop blue"></i>&nbsp; Family
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-stop green"></i>&nbsp; Friends
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-stop grey"></i>&nbsp; Work
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+
+																	<button type="button" class="btn btn-xs btn-white btn-primary">
+																		<i class="ace-icon fa fa-trash-o bigger-125 orange"></i>
+																		<span class="bigger-110">Delete</span>
+																	</button>
+																</div>
+															</div>
+
+															<div>
+																<div class="messagebar-item-left">
+																	<label class="inline middle">
+																		<input type="checkbox" id="id-toggle-all" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	&nbsp;
+																	<div class="inline position-relative">
+																		<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+																			<i class="ace-icon fa fa-caret-down bigger-125 middle"></i>
+																		</a>
+
+																		<ul class="dropdown-menu dropdown-lighter dropdown-100">
+																			<li>
+																				<a id="id-select-message-all" href="#">All</a>
+																			</li>
+
+																			<li>
+																				<a id="id-select-message-none" href="#">None</a>
+																			</li>
+
+																			<li class="divider"></li>
+
+																			<li>
+																				<a id="id-select-message-unread" href="#">Unread</a>
+																			</li>
+
+																			<li>
+																				<a id="id-select-message-read" href="#">Read</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+
+																<div class="messagebar-item-right">
+																	<div class="inline position-relative">
+																		<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+																			Sort &nbsp;
+																			<i class="ace-icon fa fa-caret-down bigger-125"></i>
+																		</a>
+
+																		<ul class="dropdown-menu dropdown-lighter dropdown-menu-right dropdown-100">
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-check green"></i>
+																					Date
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-check invisible"></i>
+																					From
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-check invisible"></i>
+																					Subject
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+																</div>
+
+																<div class="nav-search minimized">
+																	<form class="form-search">
+																		<span class="input-icon">
+																			<input type="text" autocomplete="off" class="input-small nav-search-input" placeholder="Search inbox ..." />
+																			<i class="ace-icon fa fa-search nav-search-icon"></i>
+																		</span>
+																	</form>
+																</div>
+															</div>
+														</div>
+
+														<div id="id-message-item-navbar" class="hide message-navbar clearfix">
+															<div class="message-bar">
+																<div class="message-toolbar">
+																	<div class="inline position-relative align-left">
+																		<button type="button" class="btn-white btn-primary btn btn-xs dropdown-toggle" data-toggle="dropdown">
+																			<span class="bigger-110">Action</span>
+
+																			<i class="ace-icon fa fa-caret-down icon-on-right"></i>
+																		</button>
+
+																		<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-mail-reply blue"></i>&nbsp; Reply
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-mail-forward green"></i>&nbsp; Forward
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-folder-open orange"></i>&nbsp; Archive
+																				</a>
+																			</li>
+
+																			<li class="divider"></li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-eye blue"></i>&nbsp; Mark as read
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-eye-slash green"></i>&nbsp; Mark unread
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-flag-o red"></i>&nbsp; Flag
+																				</a>
+																			</li>
+
+																			<li class="divider"></li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-trash-o red bigger-110"></i>&nbsp; Delete
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+
+																	<div class="inline position-relative align-left">
+																		<button type="button" class="btn-white btn-primary btn btn-xs dropdown-toggle" data-toggle="dropdown">
+																			<i class="ace-icon fa fa-folder-o bigger-110 blue"></i>
+																			<span class="bigger-110">Move to</span>
+
+																			<i class="ace-icon fa fa-caret-down icon-on-right"></i>
+																		</button>
+
+																		<ul class="dropdown-menu dropdown-lighter dropdown-caret dropdown-125">
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-stop pink2"></i>&nbsp; Tag#1
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-stop blue"></i>&nbsp; Family
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-stop green"></i>&nbsp; Friends
+																				</a>
+																			</li>
+
+																			<li>
+																				<a href="#">
+																					<i class="ace-icon fa fa-stop grey"></i>&nbsp; Work
+																				</a>
+																			</li>
+																		</ul>
+																	</div>
+
+																	<button type="button" class="btn btn-xs btn-white btn-primary">
+																		<i class="ace-icon fa fa-trash-o bigger-125 orange"></i>
+																		<span class="bigger-110">Delete</span>
+																	</button>
+																</div>
+															</div>
+
+															<div>
+																<div class="messagebar-item-left">
+																	<a href="#" class="btn-back-message-list">
+																		<i class="ace-icon fa fa-arrow-left blue bigger-110 middle"></i>
+																		<b class="bigger-110 middle">Back</b>
+																	</a>
+																</div>
+
+																<div class="messagebar-item-right">
+																	<i class="ace-icon fa fa-clock-o bigger-110 orange"></i>
+																	<span class="grey">Today, 7:15 pm</span>
+																</div>
+															</div>
+														</div>
+
+														<div id="id-message-new-navbar" class="hide message-navbar clearfix">
+															<div class="message-bar">
+																<div class="message-toolbar">
+																	<button type="button" class="btn btn-xs btn-white btn-primary">
+																		<i class="ace-icon fa fa-floppy-o bigger-125"></i>
+																		<span class="bigger-110">Save Draft</span>
+																	</button>
+
+																	<button type="button" class="btn btn-xs btn-white btn-primary">
+																		<i class="ace-icon fa fa-times bigger-125 orange2"></i>
+																		<span class="bigger-110">Discard</span>
+																	</button>
+																</div>
+															</div>
+
+															<div>
+																<div class="messagebar-item-left">
+																	<a href="#" class="btn-back-message-list">
+																		<i class="ace-icon fa fa-arrow-left bigger-110 middle blue"></i>
+																		<b class="middle bigger-110">Back</b>
+																	</a>
+																</div>
+
+																<div class="messagebar-item-right">
+																	<span class="inline btn-send-message">
+																		<button type="button" class="btn btn-sm btn-primary no-border btn-white btn-round">
+																			<span class="bigger-110">Send</span>
+
+																			<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+																		</button>
+																	</span>
+																</div>
+															</div>
+														</div>
+
+														<div class="message-list-container">
+															<div class="message-list" id="message-list">
+																<div class="message-item message-unread">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star orange2"></i>
+																	<span class="sender" title="Alex John Red Smith">Alex John Red Smith </span>
+																	<span class="time">1:33 pm</span>
+
+																	<span class="summary">
+																		<span class="text">
+																			Click to open this message
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item message-unread">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star-o light-grey"></i>
+
+																	<span class="sender" title="John Doe">
+																		John Doe
+																		<span class="light-grey">(4)</span>
+																	</span>
+																	<span class="time">7:15 pm</span>
+
+																	<span class="attachment">
+																		<i class="ace-icon fa fa-paperclip"></i>
+																	</span>
+
+																	<span class="summary">
+																		<span class="badge badge-pink mail-tag"></span>
+																		<span class="text">
+																			Clik to open this message right here
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star-o light-grey"></i>
+																	<span class="sender" title="Philip Markov">Philip Markov </span>
+																	<span class="time">10:15 am</span>
+
+																	<span class="attachment">
+																		<i class="ace-icon fa fa-paperclip"></i>
+																	</span>
+
+																	<span class="summary">
+																		<span class="message-flags">
+																			<i class="ace-icon fa fa-reply light-grey"></i>
+																		</span>
+																		<span class="text">
+																			Photo booth beard raw denim letterpress vegan
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star orange2"></i>
+																	<span class="sender" title="Sabrina">Sabrina </span>
+																	<span class="time">Yesterday</span>
+
+																	<span class="summary">
+																		<span class="text">
+																			Nullam quis risus eget urna mollis ornare
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star-o light-grey"></i>
+																	<span class="sender" title="Philip Markov">Philip Markov </span>
+																	<span class="time">Yesterday</span>
+
+																	<span class="attachment">
+																		<i class="ace-icon fa fa-paperclip"></i>
+																	</span>
+
+																	<span class="summary">
+																		<span class="badge badge-success mail-tag"></span>
+																		<span class="text">
+																			Vestibulum id ligula porta felis euismod
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star-o light-grey"></i>
+																	<span class="sender" title="Doctor Gomenz">Doctor Gomenz </span>
+																	<span class="time">April 5</span>
+
+																	<span class="summary">
+																		<span class="text">
+																			Vim te vivendo convenire, summo fuisset
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star-o light-grey"></i>
+																	<span class="sender" title="Robin Hood">Robin Hood </span>
+																	<span class="time">April 4</span>
+
+																	<span class="summary">
+																		<span class="message-flags">
+																			<i class="ace-icon fa fa-reply light-grey"></i>
+																		</span>
+																		<span class="text">
+																			No eos veniam equidem mentitum, his porro
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star-o light-grey"></i>
+																	<span class="sender" title="Google Inc">Google Inc </span>
+																	<span class="time">April 3</span>
+
+																	<span class="summary">
+																		<span class="badge badge-grey mail-tag"></span>
+																		<span class="text">
+																			Convallis facilisis euismod urna sodales
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star-o light-grey"></i>
+																	<span class="sender" title="Shrek">Shrek </span>
+																	<span class="time">March 28</span>
+
+																	<span class="attachment">
+																		<i class="ace-icon fa fa-paperclip"></i>
+																	</span>
+
+																	<span class="summary">
+																		<span class="message-flags">
+																			<i class="ace-icon fa fa-flag fa-flip-horizontal light-grey"></i>
+																		</span>
+																		<span class="text">
+																			Photo booth beard raw denim letterpress vegan messenger
+																		</span>
+																	</span>
+																</div>
+
+																<div class="message-item">
+																	<label class="inline">
+																		<input type="checkbox" class="ace" />
+																		<span class="lbl"></span>
+																	</label>
+
+																	<i class="message-star ace-icon fa fa-star-o light-grey"></i>
+																	<span class="sender" title="Yahoo!">Yahoo! </span>
+																	<span class="time">March 27</span>
+
+																	<span class="summary">
+																		<span class="message-flags">
+																			<i class="ace-icon fa fa-mail-forward light-grey"></i>
+																		</span>
+																		<span class="text">
+																			Tofu biodiesel williamsburg marfa, four loko mcsweeney
+																		</span>
+																	</span>
+																</div>
+															</div>
+														</div>
+
+														<div class="message-footer clearfix">
+															<div class="pull-left"> 151 messages total </div>
+
+															<div class="pull-right">
+																<div class="inline middle"> page 1 of 16 </div>
+
+																&nbsp; &nbsp;
+																<ul class="pagination middle">
+																	<li class="disabled">
+																		<span>
+																			<i class="ace-icon fa fa-step-backward middle"></i>
+																		</span>
+																	</li>
+
+																	<li class="disabled">
+																		<span>
+																			<i class="ace-icon fa fa-caret-left bigger-140 middle"></i>
+																		</span>
+																	</li>
+
+																	<li>
+																		<span>
+																			<input value="1" maxlength="3" type="text" />
+																		</span>
+																	</li>
+
+																	<li>
+																		<a href="#">
+																			<i class="ace-icon fa fa-caret-right bigger-140 middle"></i>
+																		</a>
+																	</li>
+
+																	<li>
+																		<a href="#">
+																			<i class="ace-icon fa fa-step-forward middle"></i>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+
+														<div class="hide message-footer message-footer-style2 clearfix">
+															<div class="pull-left"> simpler footer </div>
+
+															<div class="pull-right">
+																<div class="inline middle"> message 1 of 151 </div>
+
+																&nbsp; &nbsp;
+																<ul class="pagination middle">
+																	<li class="disabled">
+																		<span>
+																			<i class="ace-icon fa fa-angle-left bigger-150"></i>
+																		</span>
+																	</li>
+
+																	<li>
+																		<a href="#">
+																			<i class="ace-icon fa fa-angle-right bigger-150"></i>
+																		</a>
+																	</li>
+																</ul>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div><!-- /.tab-content -->
+										</div><!-- /.tabbable -->
+									</div><!-- /.col -->
+								</div><!-- /.row -->
+
+								<form id="id-message-form" class="hide form-horizontal message-form col-xs-12">
+									<div>
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-recipient">Recipient:</label>
+
+											<div class="col-sm-9">
+												<span class="input-icon">
+													<input type="email" name="recipient" id="form-field-recipient" data-value="alex@doe.com" value="alex@doe.com" placeholder="Recipient(s)" />
+													<i class="ace-icon fa fa-user"></i>
+												</span>
+											</div>
+										</div>
+
+										<div class="hr hr-18 dotted"></div>
+
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right" for="form-field-subject">Subject:</label>
+
+											<div class="col-sm-6 col-xs-12">
+												<div class="input-icon block col-xs-12 no-padding">
+													<input maxlength="100" type="text" class="col-xs-12" name="subject" id="form-field-subject" placeholder="Subject" />
+													<i class="ace-icon fa fa-comment-o"></i>
+												</div>
+											</div>
+										</div>
+
+										<div class="hr hr-18 dotted"></div>
+
+										<div class="form-group">
+											<label class="col-sm-3 control-label no-padding-right">
+												<span class="inline space-24 hidden-480"></span>
+												Message:
+											</label>
+
+											<div class="col-sm-9">
+												<div class="wysiwyg-editor"></div>
+											</div>
+										</div>
+
+										<div class="hr hr-18 dotted"></div>
+
+										<div class="form-group no-margin-bottom">
+											<label class="col-sm-3 control-label no-padding-right">Attachments:</label>
+
+											<div class="col-sm-9">
+												<div id="form-attachments">
+													<input type="file" name="attachment[]" />
+												</div>
+											</div>
+										</div>
+
+										<div class="align-right">
+											<button id="id-add-attachment" type="button" class="btn btn-sm btn-danger">
+												<i class="ace-icon fa fa-paperclip bigger-140"></i>
+												Add Attachment
+											</button>
+										</div>
+
+										<div class="space"></div>
+									</div>
+								</form>
+
+								<div class="hide message-content" id="id-message-content">
+									<div class="message-header clearfix">
+										<div class="pull-left">
+											<span class="blue bigger-125"> Clik to open this message </span>
+
+											<div class="space-4"></div>
+
+											<i class="ace-icon fa fa-star orange2"></i>
+
+											&nbsp;
+											<img class="middle" alt="John's Avatar" src="assets/images/avatars/avatar.png" width="32" />
+											&nbsp;
+											<a href="#" class="sender">John Doe</a>
+
+											&nbsp;
+											<i class="ace-icon fa fa-clock-o bigger-110 orange middle"></i>
+											<span class="time grey">Today, 7:15 pm</span>
+										</div>
+
+										<div class="pull-right action-buttons">
+											<a href="#">
+												<i class="ace-icon fa fa-reply green icon-only bigger-130"></i>
+											</a>
+
+											<a href="#">
+												<i class="ace-icon fa fa-mail-forward blue icon-only bigger-130"></i>
+											</a>
+
+											<a href="#">
+												<i class="ace-icon fa fa-trash-o red icon-only bigger-130"></i>
+											</a>
+										</div>
+									</div>
+
+									<div class="hr hr-double"></div>
+
+									<div class="message-body">
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+										</p>
+
+										<p>
+											Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										</p>
+
+										<p>
+											Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+										</p>
+
+										<p>
+											Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+										</p>
+
+										<p>
+											Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+										</p>
+
+										<p>
+											Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+										</p>
+									</div>
+
+									<div class="hr hr-double"></div>
+
+									<div class="message-attachment clearfix">
+										<div class="attachment-title">
+											<span class="blue bolder bigger-110">Attachments</span>
+											&nbsp;
+											<span class="grey">(2 files, 4.5 MB)</span>
+
+											<div class="inline position-relative">
+												<a href="#" data-toggle="dropdown" class="dropdown-toggle">
+													&nbsp;
+													<i class="ace-icon fa fa-caret-down bigger-125 middle"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-lighter">
+													<li>
+														<a href="#">Download all as zip</a>
+													</li>
+
+													<li>
+														<a href="#">Display in slideshow</a>
+													</li>
+												</ul>
+											</div>
+										</div>
+
+										&nbsp;
+										<ul class="attachment-list pull-left list-unstyled">
+											<li>
+												<a href="#" class="attached-file">
+													<i class="ace-icon fa fa-file-o bigger-110"></i>
+													<span class="attached-name">Document1.pdf</span>
+												</a>
+
+												<span class="action-buttons">
+													<a href="#">
+														<i class="ace-icon fa fa-download bigger-125 blue"></i>
+													</a>
+
+													<a href="#">
+														<i class="ace-icon fa fa-trash-o bigger-125 red"></i>
+													</a>
+												</span>
+											</li>
+
+											<li>
+												<a href="#" class="attached-file">
+													<i class="ace-icon fa fa-film bigger-110"></i>
+													<span class="attached-name">Sample.mp4</span>
+												</a>
+
+												<span class="action-buttons">
+													<a href="#">
+														<i class="ace-icon fa fa-download bigger-125 blue"></i>
+													</a>
+
+													<a href="#">
+														<i class="ace-icon fa fa-trash-o bigger-125 red"></i>
+													</a>
+												</span>
+											</li>
+										</ul>
+
+										<div class="attachment-images pull-right">
+											<div class="vspace-4-sm"></div>
+
+											<div>
+												<img width="36" alt="image 4" src="assets/images/gallery/thumb-4.jpg" />
+												<img width="36" alt="image 3" src="assets/images/gallery/thumb-3.jpg" />
+												<img width="36" alt="image 2" src="assets/images/gallery/thumb-2.jpg" />
+												<img width="36" alt="image 1" src="assets/images/gallery/thumb-1.jpg" />
+											</div>
+										</div>
+									</div>
+								</div><!-- /.message-content -->
+
+								<!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div><!-- /.row -->
