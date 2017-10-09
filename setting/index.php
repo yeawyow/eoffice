@@ -19,7 +19,7 @@ $Db->rule('admin_access','หน้าหลักแอดมิน','../index'
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>ADMIN SYSTEM</title>
 
 
     <!-- Bootstrap -->
@@ -27,8 +27,6 @@ $Db->rule('admin_access','หน้าหลักแอดมิน','../index'
    
     <link href="../includes/DataTables-1.10.13/css/dataTables.bootstrap.min.css" rel="stylesheet">
   
-    
-      <link href="../includes/select2/css/select2.css" rel="stylesheet"/>
   </head>
   <body>
       <div class="wrapper"> 
@@ -43,7 +41,7 @@ $Db->rule('admin_access','หน้าหลักแอดมิน','../index'
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">SETTING PROGRAM</a>
+      <a class="navbar-brand" href="./">SETTING PROGRAM</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,9 +78,6 @@ $Db->rule('admin_access','หน้าหลักแอดมิน','../index'
     
           <script src="../includes/validator/jquery.validate.min.js"></script>
      
-      <script src="../includes/select2/js/select2.js"></script>
-      
-      
           </div>
           <div class="container-fluid">
               <div class="container">
