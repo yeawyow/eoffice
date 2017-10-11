@@ -11,6 +11,11 @@ define("username2","sa");
 define("password2","sa");
 define("db2", "hos");
 
+define("host5", "192.168.2.5");
+define("username5","sa");
+define("password5","sa");
+define("db5", "hos");
+
 class MySqlConn {
 
     protected $_mysql;
@@ -265,7 +270,66 @@ class MySqlConn2 { //query only
     }
 
 }
+class MySqlConn5 {
 
+    protected $_mysql;
+    protected $_tableName;
+    protected $_where;
+    protected $_order;
+    protected $_limit;
+
+    public function __construct() {
+        $this->_mysql = new mysqli(host5, username5, password5, db5)
+                or die('not connect to sql');
+    }
+
+    public function where($prop, $value) {
+        if (!empty($prop) && !empty($value)) {
+            $this->_where = "WHERE $prop = '$value'";
+        }
+    }
+
+    public function order($order, $sort) {
+        if (!empty($order)) {
+            $this->_order = "order by $order $sort";
+        }
+    }
+
+    public function limit($value) {
+        if (!empty($value)) {
+            $this->_limit = "LIMIT $value";
+        }
+    }
+
+    public function query($sql = '', $tableName = '') {
+        if (!empty($sql)) {
+            $sql = $sql;
+        } else {
+            $sql = 'SELECT * FROM';
+        }
+        $results = '';
+        $this->_tableName = $tableName;
+        $query = $this->_mysql->query('SET NAMES UTF8');
+        $query = $this->_mysql->query("$sql $this->_tableName $this->_where
+                 $this->_order $this->_limit");
+
+
+
+        while ($row = $query->fetch_array()) {
+            $results[] = $row;
+        }
+
+        return $results;
+    }
+     public function num_rows_qurery($tableName) { //หาจำนวนแถวทั่วไป
+        $this->_tableName = $tableName;
+        $sql = 'SELECT * FROM';
+        $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
+        $results = mysqli_num_rows($query);
+
+        return $results;
+    }
+}
 function DateThai($strDate)
 
 {
