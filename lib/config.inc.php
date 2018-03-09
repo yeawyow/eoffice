@@ -1,8 +1,8 @@
 <?php
 
 define("host", "localhost");
-define("username", "yeaw");
-define("password", "xitdyo2017");
+define("username", "root");
+define("password", "xitdyo2018");
 define("db", "airoffice");
 
 
@@ -11,7 +11,7 @@ define("username2","sa");
 define("password2","sa");
 define("db2", "hos");
 
-define("host5", "192.168.2.5");
+define("host5", "192.168.2.5:3306");
 define("username5","sa");
 define("password5","sa");
 define("db5", "hos");
@@ -144,7 +144,7 @@ public function delete($tableName)
         }
     }
 
-    public function num_rows_qurery($tableName) { //หาจำนวนแถวทั่วไป
+    public function num_rows_qurery($tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
         $this->_tableName = $tableName;
         $sql = 'SELECT * FROM';
         $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
@@ -153,7 +153,8 @@ public function delete($tableName)
         return $results;
     }
 
-    public function num_rows($tableName) { //ใช้ตรวจสอบการ login
+    public function num_rows($tableName) { //�?�?�?ตรว�?สอ�?�?าร login
+        
         $this->_tableName = $tableName;
         $sql = 'SELECT * FROM';
         $query = $this->_mysql->query("$sql $this->_tableName $this->_whereuser");
@@ -162,18 +163,18 @@ public function delete($tableName)
         return $results;
     }
 
-//ตรวจสอบการเข้าใช้งานแต่ละหน้า
+//ตรว�?สอ�?�?ารเ�?�?า�?�?�?�?า�?�?ต�?ละห�?�?า
     public function rule($table,$pages,$topage) {
         $Db = new MySqlConn;
-        $warning = 'ท่านไม่สามารถใช้งานหน้านี้ได้ กรุณาติดต่อ ADMIN';
-        $groupuser = (isset($_SESSION['groupname']) ? $_SESSION['groupname'] : ''); //ตรวจสอบถ้ามีจาก session ของ id_user ถ้าไม่มีให้แทนด้วยค่าว่าง
-        if ($groupuser == "1") { //ตรวจสอบว่าถ้าไม่มีการ login ให้ออกจากการทำงาน 1คือ ผู้ดูแลระบบให้ผ่านทุกหน้า
+        $warning = 'ท�?า�?�?ม�?สามารถ�?�?�?�?า�?ห�?�?า�?ี�?�?ด�? �?รุณาติดต�?อ ADMIN';
+        $groupuser = (isset($_SESSION['groupname']) ? $_SESSION['groupname'] : ''); //ตรว�?สอ�?ถ�?ามี�?า�? session �?อ�? id_user ถ�?า�?ม�?มี�?ห�?�?ท�?ด�?วย�?�?าว�?า�?
+        if ($groupuser == "1") { //ตรว�?สอ�?ว�?าถ�?า�?ม�?มี�?าร login �?ห�?ออ�?�?า�?�?ารทำ�?า�? 1�?ือ �?ู�?ดู�?ลระ�?�?�?ห�?�?�?า�?ทุ�?ห�?�?า
             return TRUE;
         } else {
             $Db->where('name', $pages);
             $sql = $Db->query('', $table);
             foreach ($sql AS $row) {
-                $allow_group = explode(",", $row['allow_group']); //ตัดเครื่องหมาย , ออก
+                $allow_group = explode(",", $row['allow_group']); //ตัดเ�?รื�?อ�?หมาย , ออ�?
                 foreach ($allow_group as $row_allow_group) {
 
                     if ($row_allow_group == $groupuser) {
@@ -181,7 +182,7 @@ public function delete($tableName)
                     } else {
                         
                          
-                        echo "<script> alert('ท่านไม่ได้รับอนุญาติให้ดูหน้านี้ ') </script>";
+                        echo "<script> alert('ท�?า�?�?ม�?�?ด�?รั�?อ�?ุ�?าติ�?ห�?ดูห�?�?า�?ี�? ') </script>";
                         echo "<script> window.location.replace('".$topage.".php') </script>";
                     }
                 }
@@ -260,7 +261,7 @@ class MySqlConn2 { //query only
         }
     }
 
-    public function num_rows_qurery($tableName) { //หาจำนวนแถวทั่วไป
+    public function num_rows_qurery($tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
         $this->_tableName = $tableName;
         $sql = 'SELECT * FROM';
         $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
@@ -321,9 +322,14 @@ class MySqlConn5 {
 
         return $results;
     }
-     public function num_rows_qurery($tableName) { //หาจำนวนแถวทั่วไป
+     public function num_rows_qurery($sql,$tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
+          if (!empty($sql)) {
+            $sql = $sql;
+        } else {
+            $sql = 'SELECT * FROM';
+        }
         $this->_tableName = $tableName;
-        $sql = 'SELECT * FROM';
+     
         $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
         $results = mysqli_num_rows($query);
 
@@ -346,7 +352,7 @@ $strMinute= date("i",strtotime($strDate));
 
 $strSeconds= date("s",strtotime($strDate));
 
-$strMonthCut = Array("","ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค.");
+$strMonthCut = Array("","ม.�?.","�?.�?.","มี.�?.","เม.ย.","�?.�?.","มิ.ย.","�?.�?.","ส.�?.","�?.ย.","ต.�?.","�?.ย.","�?.�?.");
 
 $strMonthThai=$strMonthCut[$strMonth];
 
