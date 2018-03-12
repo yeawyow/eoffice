@@ -1,5 +1,7 @@
 
-<?PHP $Db->rule('admin_access', 'ข้อมูลผู้ใช้งาน', 'index'); ?>
+<?PHP
+$Db->rule('admin_access', 'usermanager', 'index'); 
+?>
 
 
 <div class="table-responsive">

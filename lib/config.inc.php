@@ -144,7 +144,7 @@ public function delete($tableName)
         }
     }
 
-    public function num_rows_qurery($tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
+    public function num_rows_qurery($tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
         $this->_tableName = $tableName;
         $sql = 'SELECT * FROM';
         $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
@@ -153,7 +153,7 @@ public function delete($tableName)
         return $results;
     }
 
-    public function num_rows($tableName) { //�?�?�?ตรว�?สอ�?�?าร login
+    public function num_rows($tableName) { //�?�?�?ตรว�?สอ�?�?าร login
         
         $this->_tableName = $tableName;
         $sql = 'SELECT * FROM';
@@ -163,18 +163,18 @@ public function delete($tableName)
         return $results;
     }
 
-//ตรว�?สอ�?�?ารเ�?�?า�?�?�?�?า�?�?ต�?ละห�?�?า
+//ตรว�?สอ�?�?ารเ�?�?า�?�?�?�?า�?�?ต�?ละห�?�?า
     public function rule($table,$pages,$topage) {
         $Db = new MySqlConn;
-        $warning = 'ท�?า�?�?ม�?สามารถ�?�?�?�?า�?ห�?�?า�?ี�?�?ด�? �?รุณาติดต�?อ ADMIN';
-        $groupuser = (isset($_SESSION['groupname']) ? $_SESSION['groupname'] : ''); //ตรว�?สอ�?ถ�?ามี�?า�? session �?อ�? id_user ถ�?า�?ม�?มี�?ห�?�?ท�?ด�?วย�?�?าว�?า�?
-        if ($groupuser == "1") { //ตรว�?สอ�?ว�?าถ�?า�?ม�?มี�?าร login �?ห�?ออ�?�?า�?�?ารทำ�?า�? 1�?ือ �?ู�?ดู�?ลระ�?�?�?ห�?�?�?า�?ทุ�?ห�?�?า
+        $warning = 'ท่าไม่ได้รับอนุญาติให้เข้าใช้งาน';
+        $groupuser = (isset($_SESSION['groupname']) ? $_SESSION['groupname'] : ''); //ตรว�?สอ�?ถ�?ามี�?า�? session �?อ�? id_user ถ�?า�?ม�?มี�?ห�?�?ท�?ด�?วย�?�?าว�?า�?
+        if ($groupuser == "1") { //ตรว�?สอ�?ว�?าถ�?า�?ม�?มี�?าร login �?ห�?ออ�?�?า�?�?ารทำ�?า�? 1�?ือ �?ู�?ดู�?ลระ�?�?�?ห�?�?�?า�?ทุ�?ห�?�?า
             return TRUE;
         } else {
             $Db->where('name', $pages);
             $sql = $Db->query('', $table);
             foreach ($sql AS $row) {
-                $allow_group = explode(",", $row['allow_group']); //ตัดเ�?รื�?อ�?หมาย , ออ�?
+                $allow_group = explode(",", $row['allow_group']); //ตัดเ�?รื�?อ�?หมาย , ออ�?
                 foreach ($allow_group as $row_allow_group) {
 
                     if ($row_allow_group == $groupuser) {
@@ -182,7 +182,7 @@ public function delete($tableName)
                     } else {
                         
                          
-                        echo "<script> alert('ท�?า�?�?ม�?�?ด�?รั�?อ�?ุ�?าติ�?ห�?ดูห�?�?า�?ี�? ') </script>";
+                        echo "<script> alert('".$warning." ') </script>";
                         echo "<script> window.location.replace('".$topage.".php') </script>";
                     }
                 }
@@ -261,7 +261,7 @@ class MySqlConn2 { //query only
         }
     }
 
-    public function num_rows_qurery($tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
+    public function num_rows_qurery($tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
         $this->_tableName = $tableName;
         $sql = 'SELECT * FROM';
         $query = $this->_mysql->query("$sql $this->_tableName $this->_where");
@@ -322,7 +322,7 @@ class MySqlConn5 {
 
         return $results;
     }
-     public function num_rows_qurery($sql,$tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
+     public function num_rows_qurery($sql,$tableName) { //หา�?ำ�?ว�?�?ถวทั�?ว�?�?
           if (!empty($sql)) {
             $sql = $sql;
         } else {
@@ -352,7 +352,7 @@ $strMinute= date("i",strtotime($strDate));
 
 $strSeconds= date("s",strtotime($strDate));
 
-$strMonthCut = Array("","ม.�?.","�?.�?.","มี.�?.","เม.ย.","�?.�?.","มิ.ย.","�?.�?.","ส.�?.","�?.ย.","ต.�?.","�?.ย.","�?.�?.");
+$strMonthCut = Array("","ม.�?.","�?.�?.","มี.�?.","เม.ย.","�?.�?.","มิ.ย.","�?.�?.","ส.�?.","�?.ย.","ต.�?.","�?.ย.","�?.�?.");
 
 $strMonthThai=$strMonthCut[$strMonth];
 

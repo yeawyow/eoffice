@@ -1,6 +1,6 @@
  <?PHP include_once '../../../lib/config.inc.php';
 $Db = new MySqlConn; 
-
+$Db->rule('admin_access', 'usermanager', 'index');
 
               
 $sql="SELECT em.uid ,em.username,CONCAT(pname.pname,em.fname,' ',em.fname) AS fullname

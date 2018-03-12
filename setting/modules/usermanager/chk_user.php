@@ -1,6 +1,7 @@
 <?PHP include_once '../../../lib/config.inc.php';
-$Db = new MySqlConn; 
 
+$Db = new MySqlConn; 
+$Db->rule('admin_access', 'usermanager', 'index');
 
 if($_POST['username']){
    $data = array(

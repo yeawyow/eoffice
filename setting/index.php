@@ -10,7 +10,7 @@ include_once '../lib/config.inc.php';
 $Db = new MySqlConn;
 
 
-$Db->rule('admin_access','หน้าหลักแอดมิน','../index');//เงื่อนไขการเข้าใช้งาน
+$Db->rule('admin_access','main_setting','../index');//เงื่อนไขการเข้าใช้งาน
 ?>
 <!DOCTYPE html>
 <html lang="en">

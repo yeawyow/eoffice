@@ -1,7 +1,9 @@
 <?php
 
 include_once '../../../lib/config.inc.php';
+
 $Db = new MySqlConn;
+$Db->rule('admin_access', 'usermanager', 'index');
 // ส่วนของการเพิ่ม ลบ แก้ไข ข้อมูล
 if ($_POST['saveBtn']) {  //ถ้ามีการกดปุ่ม saveBtn2
     if ($_POST['edit_user']) { //ถ้ามีการส่งค่า uid มาแสดงว่าเป็นการแก้ไข
