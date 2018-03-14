@@ -166,7 +166,7 @@ public function delete($tableName)
 //ตรว�?สอ�?�?ารเ�?�?า�?�?�?�?า�?�?ต�?ละห�?�?า
     public function rule($table,$pages,$topage) {
         $Db = new MySqlConn;
-        $warning = 'ท่าไม่ได้รับอนุญาติให้เข้าใช้งาน';
+        $warning = 'ท่าไม่ได้รับอนุญาติให้เข้าใช้งาน ';
         $groupuser = (isset($_SESSION['groupname']) ? $_SESSION['groupname'] : ''); //ตรว�?สอ�?ถ�?ามี�?า�? session �?อ�? id_user ถ�?า�?ม�?มี�?ห�?�?ท�?ด�?วย�?�?าว�?า�?
         if ($groupuser == "1") { //ตรว�?สอ�?ว�?าถ�?า�?ม�?มี�?าร login �?ห�?ออ�?�?า�?�?ารทำ�?า�? 1�?ือ �?ู�?ดู�?ลระ�?�?�?ห�?�?�?า�?ทุ�?ห�?�?า
             return TRUE;

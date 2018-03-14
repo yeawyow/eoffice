@@ -8,6 +8,6 @@
 include_once '../../../lib/config.inc.php';
 $Db = new MySqlConn;
 if($_POST['delete_group']=='delete'){
-    $Db->where('group_user_id',$_POST['delete_id']);
+    $Db->where('id',$_POST['delete_id']);
         $Db->delete('group_user');
 }

@@ -307,7 +307,7 @@ $Db->rule('admin_access', 'usermanager', 'index');
                                                 foreach ($sql as $row) {
                                                     ?>
 
-                                                    <option value="<?php echo $row['group_user_id'] ?>"> <?php echo $row['group_user_name']; ?></option>
+                                                    <option value="<?php echo $row['id'] ?>"> <?php echo $row['group_user_name']; ?></option>
                                                 <?php } ?>
                                             </select>
                                         </div>

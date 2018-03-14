@@ -48,7 +48,7 @@ $Db->rule('admin_access','main_setting','../index');//เงื่อนไข�
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><a href="?m=usermanager&p=userdata">จัดการข้อมูลผู้ใช้ <span class="sr-only">(current)</span></a></li>
-     
+      <li class=""><a href="?m=group_user&p=index">จัดการกลุ่ม <span class="sr-only">(current)</span></a></li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">

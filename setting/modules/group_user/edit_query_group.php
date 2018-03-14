@@ -5,7 +5,7 @@ $Db = new MySqlConn;
 	
    
        //$sql=array("group_user_name"=>"yeaw","group_user_id"=>"1");
-    $Db->where('group_user_id', $_POST['sql']);
+    $Db->where('id', $_POST['sql']);
 $sql = $Db->query('select * from group_user', '');
             $a_data=array();
           foreach ($sql as $row){

@@ -1,14 +1,14 @@
 <?PHP include_once '../../../lib/config.inc.php';
 
 $Db = new MySqlConn; 
-$Db->rule('admin_access', 'usermanager', 'index');
 
-if($_POST['username']){
+
+if($_POST['group_name']){
    $data = array(
-        'username' => $_POST['username']
+        'group_user_name' => $_POST['group_name']
     );
-   $Db->where('uid',$_POST['sql']);
-    $num = $Db->num_rows('employee');
+   $Db->where('id',$_POST['sql']);
+    $num = $Db->num_rows('group_user');
     if ($num>0)  {
     // User name is registered on another account
     echo 'false';
