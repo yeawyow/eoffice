@@ -119,7 +119,7 @@ $Db = new MySqlConn;
             $_SESSION['loginname'] = $row['username'];
             $_SESSION['name'] = $row['fname'];
                $_SESSION['lname'] = $row['lname'];
-             $_SESSION['groupname'] = $row['group_user_id'];
+             $_SESSION['groupname'] = $row['id'];
              
             echo "<script> window.location.replace('index.php') </script>" ;
         }
