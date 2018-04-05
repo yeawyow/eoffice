@@ -74,7 +74,7 @@ $(function(){
 					.find("td:eq(2)").text(response.data[i].fullname).end()
                                         .find("td:eq(3)").text(response.data[i].cid).end()
                                         .find("td:eq(4)").text(response.data[i].vstdate).end()
-                                        .find("td:eq(5)").text(response.data[i].hospmain +" " + response.data[i].hosname).end()
+                                        .find("td:eq(5)").text(response.data[i].hosname +" " + response.data[i].hosname).end()
 					  .find("td:eq(6)").text(response.data[i].name_staff).end()
 					).html();	
 					rowListData+="</tr>";
