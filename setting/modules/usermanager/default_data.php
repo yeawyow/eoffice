@@ -1,7 +1,7 @@
  <?PHP include_once '../../../lib/config.inc.php';
 $Db = new MySqlConn; 
-$Db->rule('admin_access', 'usermanager', 'index');
 
+if($_POST['req']=='req'){
               
 $sql="SELECT em.uid ,em.username,CONCAT(pname.pname,em.fname,' ',em.lname) AS fullname
      ,gu.group_user_name ,hd.name FROM employee em 
@@ -19,5 +19,5 @@ LEFT OUTER   JOIN group_user gu ON gu.id=em.group_user_id";
         "data" => $data
     );	
                 echo json_encode($response);   
-          
+}       
      ?>

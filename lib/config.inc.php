@@ -2,16 +2,16 @@
 
 define("host", "localhost");
 define("username", "root");
-define("password", "xitdyo2018");
+define("password", "");
 define("db", "airoffice");
 
 
-define("host2", "192.168.2.11");
+define("host2", "localhost");
 define("username2","sa");
 define("password2","sa");
 define("db2", "hos");
 
-define("host5", "192.168.2.5:3306");
+define("host5", "localhost");
 define("username5","sa");
 define("password5","sa");
 define("db5", "hos");
@@ -164,32 +164,30 @@ public function delete($tableName)
     }
 
 //ตรว�?สอ�?�?ารเ�?�?า�?�?�?�?า�?�?ต�?ละห�?�?า
-    public function rule($table,$pages,$topage) {
+    public function rule($pages) {
         $Db = new MySqlConn;
-        $warning = 'ท่าไม่ได้รับอนุญาติให้เข้าใช้งาน ';
-        $groupuser = (isset($_SESSION['groupname']) ? $_SESSION['groupname'] : ''); //ตรว�?สอ�?ถ�?ามี�?า�? session �?อ�? id_user ถ�?า�?ม�?มี�?ห�?�?ท�?ด�?วย�?�?าว�?า�?
-        if ($groupuser == "1") { //ตรว�?สอ�?ว�?าถ�?า�?ม�?มี�?าร login �?ห�?ออ�?�?า�?�?ารทำ�?า�? 1�?ือ �?ู�?ดู�?ลระ�?�?�?ห�?�?�?า�?ทุ�?ห�?�?า
-            return TRUE;
-        } else {
-            $Db->where('name', $pages);
-            $sql = $Db->query('', $table);
+        $warning = 'ท่านไม่ได้รับอนุญาติให้เข้าใช้งาน ';
+        
+        $group_user_name = (isset($_SESSION['groupname']) ? $_SESSION['groupname'] : '');
+        if($pages==''){
+       if (!isset($_SESSION['loginname'])) {
+           
+    echo "<script> window.history.back() </script>";
+}
+        }else{
+            $sql = $Db->query("SELECT * FROM group_user where id='".$group_user_name."'","");
             foreach ($sql AS $row) {
-                $allow_group = explode(",", $row['allow_group']); //ตัดเ�?รื�?อ�?หมาย , ออ�?
-                foreach ($allow_group as $row_allow_group) {
-
-                    if ($row_allow_group == $groupuser) {
-                        return TRUE;
-                    } else {
-                        
-                         
-                        echo "<script> alert('".$warning." ') </script>";
-                        echo "<script> window.location.replace('".$topage.".php') </script>";
-                    }
-                }
+         $access_name= $row[$pages];
+         
             }
+      if($access_name=="Y"){
+            return TRUE;
+        }else{
+            echo "<script>alert('".$warning .$pages."')</script>";
+              echo "<script> window.location.replace('../index.php') </script>";
         }
     }
-
+    }
 }
 
 class MySqlConn2 { //query only

@@ -1,9 +1,7 @@
 <?php
 include_once '../../../lib/config.inc.php';
 $Db = new MySqlConn;
-$Db->rule('admin_access', 'usermanager', 'index');		
-	
-   
+if($_POST['sql']){
       // $sql=array("username"=>"yeaw","password"=>"มาตุภูมิ");
     $Db->where('uid', $_POST['sql']);
 $sql = $Db->query('select * from employee', '');
@@ -13,4 +11,4 @@ $sql = $Db->query('select * from employee', '');
                  
              }
 echo json_encode($row);
-    
+}

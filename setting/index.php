@@ -1,14 +1,11 @@
 <?PHP
 session_start();
-if (!isset($_SESSION['loginname'])) {
 
-    echo "<script> window.location.replace('../login.php') </script>";
-}
 include_once '../lib/config.inc.php';
 $Db = new MySqlConn;
 
 
-$Db->rule('admin_access', 'main_setting', '../index'); //เงื่อนไขการเข้าใช้งาน
+$Db->rule('');
 ?>
 <!DOCTYPE html>
 <html lang="en">

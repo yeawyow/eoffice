@@ -78,9 +78,9 @@ if(!isset($_SESSION['loginname']))
                         </div>
                         
                         <div class="menu-item light-red">
-                            <a href="#about-modal" data-toggle="modal">
+                            <a href="Palliative_Care/">
                                 <i class="fa fa-user"></i>
-                                <p>จองห้องประชุม</p>
+                                <p>ศูนย์ Palliative Care</p>
                             </a>
                         </div>
                          

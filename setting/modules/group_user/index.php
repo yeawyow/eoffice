@@ -1,4 +1,4 @@
-<?PHP //$Db->rule('admin_access', 'ข้อมูลผู้ใช้งาน', 'index'); ?>
+<?PHP $Db->rule('group_user'); ?>
 <div class="row">
     <div class="col-lg-12">
         <h2 class="page-header">
@@ -30,8 +30,12 @@
 <script type="text/javascript">
     $(document).ready(function () {
         var t = $('#example').DataTable({
-            "ajax": "modules/group_user/default_group_data.php",
-
+            "ajax":{ 
+                "url":"modules/group_user/default_group_data.php",
+                "type":"POST",
+                "data":{req:'req'}
+            },
+            
             "columnDefs": [
 
                 {
@@ -74,9 +78,13 @@
             $("#groupaccessformModal").modal();
             $.post("modules/group_user/edit_query_group.php", {sql: data[0]})
                     .done(function (data) {
+                      
                         var ard = JSON.parse(data);
+                
                         $("#group_name_access").text(ard['group_user_name']);
                         $("#edit_group2").val(ard['id']);
+                        $("#usermanager").text(ard['usermanager']);
+                        
                     });
             // alert( data[0] +"'s salary is: "+ data[ 0 ] );
         });
@@ -202,43 +210,14 @@
                 <div class="row">
                  
                             <div class="panel-body">
-                                <form class="form-horizontal " id="userform" action="" method="POST">
-                                    <div class="col-lg-4">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">setting</div>
-                                            <div class="panel-body">
-                                                <p>จัดการข้อมูลผู้ใช้</p>
-                                                <p>จัดการกลุ่มผู้ใช้</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                      <div class="col-lg-4">
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">setting</div>
-                                            <div class="panel-body">
-                                                <p>จัดการข้อมูลผู้ใช้</p>
-                                                <p>จัดการกลุ่มผู้ใช้</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                      <div class="col-lg-4">
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">Panel title</h3>
-  </div>
-  <div class="panel-body">
-    Panel content
-  </div>
-</div>
-                                      </div>
-                                    <input id="edit_group" name="edit_group" type="hidden">
-                                    <div class="form-group">
+                                <span id="usermanager"></span>
+                                   <div class="form-group">
                                         <div class="col-lg-offset-2 col-lg-10">
                                             <button  class="btn btn-success">บันทึก</button>
                                             <button id="cancelBtn" type="button" class="btn btn-danger btn-default pull-center" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
                                         </div>
                                     </div>
-                                </form>
+</div>
                             </div>
                         
                     
@@ -246,4 +225,4 @@
             </div>
         </div>
     </div>
-</div>
+

@@ -1,6 +1,6 @@
 
 <?PHP
-$Db->rule('admin_access', 'usermanager', 'index'); 
+$Db->rule('usermanager'); 
 ?>
 
 
@@ -27,8 +27,11 @@ $Db->rule('admin_access', 'usermanager', 'index');
 <script type="text/javascript">
     $(document).ready(function () {
         var t = $('#example').DataTable({
-            "ajax": "modules/usermanager/default_data.php",
-
+            "ajax":{ 
+                   "url": "modules/usermanager/default_data.php",
+                    "type":"post",
+                    "data":{req:'req'}
+                },
             "columnDefs": [
 
                 {

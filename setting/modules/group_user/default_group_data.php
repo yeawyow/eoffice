@@ -1,11 +1,8 @@
  <?PHP include_once '../../../lib/config.inc.php';
 $Db = new MySqlConn; 
-$Db->rule('admin_access', 'usermanager', 'index');
-
-              
-
-
-                $sql = $Db->query('','group_user');
+//$Db->rule('admin_access', 'usermanager', 'index');
+if($_POST['req']){
+$sql = $Db->query('','group_user');
                $data = array();
         foreach ($sql as $row ) {
             $data[] = $row ;
@@ -15,5 +12,5 @@ $Db->rule('admin_access', 'usermanager', 'index');
         "data" => $data
     );	
                 echo json_encode($response);   
-          
+}   
      ?>
