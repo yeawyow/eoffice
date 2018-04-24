@@ -6,10 +6,10 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 
     include_once '../../../lib/config.inc.php';
     $Db = new MySqlConn;
+ if (isset($_POST['action']) && $_POST['action'] == "list") {
+    $sql = "SELECT * FROM insurance_error_pttype";
 
-    $sql = "SELECT * from insurance_error_pttype";
-
-    if (isset($_POST['action']) && $_POST['action'] == "list") {
+   
     $result = $Db->query($sql, '');
 
     foreach ($result AS $row) {
@@ -18,11 +18,11 @@ header("Cache-Control: post-check=0, pre-check=0", false);
             "no" => $no,
             "hn" => $row['hn'],
             "fullname" => $row['fullname'],
-             "cid"=>$row['cid'],
+            "cid"=>$row['cid'],
              "vstdate"=>$row['vstdate'],
-             "hospmain"=>$row['hospmain'],
-             "hosname"=>$row['hosname'],
-              "name_staff"=>$row['name_staff']
+             "vsttime"=>$row['vsttime'],
+             "name_staff"=>$row['name_staff'],
+             "hosname"=>$row['hosname']
         );
     }
     if (isset($json_data)) {
@@ -33,4 +33,4 @@ header("Cache-Control: post-check=0, pre-check=0", false);
             echo $json;
         }
     }
-}
+ }

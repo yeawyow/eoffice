@@ -341,7 +341,7 @@
 
                         <li>
                             <a href="?p=pttype_error">
-                                <i class="fa fa-th"></i> <span>ระบบ PTTYPE ERROR</span>
+                                <i class="fa fa-th"></i> <span>รายชื่อผู้ป่วยระบุสิทธิ์ผิด</span>
                                 <span class="pull-right-container">
                                     <small class="label pull-right bg-green">new</small>
                                 </span>

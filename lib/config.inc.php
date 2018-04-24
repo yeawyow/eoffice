@@ -2,16 +2,16 @@
 
 define("host", "localhost");
 define("username", "root");
-define("password", "");
+define("password", "xitdyo2017");
 define("db", "airoffice");
 
 
-define("host2", "localhost");
+define("host11", "192.168.2.11");
 define("username2","sa");
 define("password2","sa");
 define("db2", "hos");
 
-define("host5", "localhost");
+define("host5", "192.168.2.5");
 define("username5","sa");
 define("password5","sa");
 define("db5", "hos");
@@ -199,7 +199,7 @@ class MySqlConn2 { //query only
     protected $_limit;
 
     public function __construct() {
-        $this->_mysql = new mysqli(host2, username2, password2, db2)
+        $this->_mysql = new mysqli(host11, username2, password2, db2)
                 or die('not connect to sql');
     }
 

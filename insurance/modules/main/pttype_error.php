@@ -33,6 +33,7 @@
                   <th>ชื่อ-สกุล</th>
                   <th>CID</th>
                   <th>วันที่รับบริการ</th>
+                    <th>เวลา</th>
                   <th>สถานบริการ</th>
                   <th>ผู้ส่งตรวจ</th>
                 </tr>
@@ -45,7 +46,7 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                </tr>
+                   <td></td>
                 </tbody>
               </table>
             </div>
@@ -65,7 +66,7 @@ $(function(){
            // alert("แจ้งเเมื่อทำการส่งข้อมูลเรียบร้อยแล้ว");
            console.log(response);
            var rowListData="";
-          $.each(response.data,function(i){
+           $.each(response.data,function(i){
 					rowListData = "";
 					rowListData+="<tr class=\"list-data\">";
 					rowListData+=$(
@@ -74,8 +75,9 @@ $(function(){
 					.find("td:eq(2)").text(response.data[i].fullname).end()
                                         .find("td:eq(3)").text(response.data[i].cid).end()
                                         .find("td:eq(4)").text(response.data[i].vstdate).end()
-                                        .find("td:eq(5)").text(response.data[i].hosname +" " + response.data[i].hosname).end()
-					  .find("td:eq(6)").text(response.data[i].name_staff).end()
+                                        .find("td:eq(5)").text(response.data[i].vsttime).end()
+                                        .find("td:eq(6)").text(response.data[i].hosname).end()
+					.find("td:eq(7)").text(response.data[i].name_staff).end()
 					).html();	
 					rowListData+="</tr>";
 					$(".show-list-data").append(rowListData);

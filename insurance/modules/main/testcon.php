@@ -8,7 +8,7 @@
 	ini_set('display_errors', 1);
 	error_reporting(~0);
 
-   $serverName = "192.168.2.11:3306";
+   $serverName = "192.168.2.5:3306";
    $userName = "sa";
    $userPassword = "sa";
    $dbName = "hos";

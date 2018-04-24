@@ -30,12 +30,12 @@
 <script type="text/javascript">
     $(document).ready(function () {
         var t = $('#example').DataTable({
-            "ajax":{ 
-                "url":"modules/group_user/default_group_data.php",
-                "type":"POST",
-                "data":{req:'req'}
+            "ajax": {
+                "url": "modules/group_user/default_group_data.php",
+                "type": "POST",
+                "data": {req: 'req'}
             },
-            
+
             "columnDefs": [
 
                 {
@@ -67,9 +67,10 @@
             $.post("modules/group_user/edit_query_group.php", {sql: data[0]})
                     .done(function (data) {
                         var ard = JSON.parse(data);
-                        console.log(data);
+
                         $("#group_name").val(ard['group_user_name']);
                         $("#edit_group").val(ard['id']);
+
                     });
             // alert( data[0] +"'s salary is: "+ data[ 0 ] );
         });
@@ -78,13 +79,14 @@
             $("#groupaccessformModal").modal();
             $.post("modules/group_user/edit_query_group.php", {sql: data[0]})
                     .done(function (data) {
-                      
+                        console.log(data);
                         var ard = JSON.parse(data);
-                
+
                         $("#group_name_access").text(ard['group_user_name']);
                         $("#edit_group2").val(ard['id']);
-                        $("#usermanager").text(ard['usermanager']);
-                        
+
+                        $("#usermanager").val(ard['usermanager']);
+
                     });
             // alert( data[0] +"'s salary is: "+ data[ 0 ] );
         });
@@ -203,26 +205,105 @@
         <div class="modal-content">
             <div class="modal-header">
 
-                <h4 class="modal-title"> กำหนดการเข้าถึงของกลุ่ม <span  id="group_name_access"></span></h4>
+                <h4 class="modal-title">Form เพิ่มผู้ใช้งาน</h4>
             </div>
             <div class="modal-body">
 
                 <div class="row">
-                 
+                    <div class="col-lg-12">
+                        <section class="panel">
+
                             <div class="panel-body">
-                                <span id="usermanager"></span>
-                                   <div class="form-group">
+                                <form class="form-horizontal " id="userform" action="" method="POST">
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">USERNAME</label>
+                                        <div class="col-sm-10">
+                                            <input type="checkbox" id="usermanager"  name="usermanager"/>
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">PASSWORD</label>
+                                        <div class="col-sm-10">
+                                            <input id="password" name="password" type="password" onkeyup="eng_only()" class="form-control"
+
+                                                   >
+
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">คำนำหน้า</label>
+                                        <div class="col-sm-10">
+                                            <select  id="pname" name="pname" class="form-control" >
+                                                <option value="">-- เมนู --</option>
+                                                <?php
+                                                $sql = $Db->query('', 'pname');
+                                                foreach ($sql as $row) {
+                                                    ?>
+                                                    <option value="<?php echo $row['pname_id'] ?>"> <?php echo $row['pname']; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">ชื่อ</label>
+                                        <div class="col-sm-10">
+                                            <input id="fname" name="fname"  type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">นามสกุล</label>
+                                        <div class="col-sm-10">
+                                            <input class="form-control"  id="lname" name="lname" type="text" data-validation="required">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">กลุ่มผู้ใช้งาน</label>
+                                        <div class="col-sm-10">
+                                            <select  id="group_user" name="group_user" class="form-control " data-validation="required"  data-validation-error-msg="กรุณาเลือกกลุ่มผู้ใช้งาน">
+                                                <option value="" >-- เมนู --</option>
+                                                <?php
+                                                $sql = $Db->query('', 'group_user');
+                                                foreach ($sql as $row) {
+                                                    ?>
+
+                                                    <option value="<?php echo $row['id'] ?>"> <?php echo $row['group_user_name']; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="col-sm-2 col-sm-2 control-label">ฝ่าย/งาน</label>
+                                        <div class="col-sm-10">
+                                            <select class="form-control" id="hospital_department" name="hospital_department"  style="width:100%;">
+                                                <option value="" >-- เมนู --</option>
+                                                <?php
+                                                $sql = $Db->query('', 'hospital_department');
+                                                foreach ($sql as $row) {
+                                                    ?>
+
+                                                    <option value="<?php echo $row['id'] ?>"><?php echo $row['id'] ?> : <?php echo $row['name']; ?></option>
+                                                <?php } ?>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <input id="edit_user" name="edit_user" type="hidden">
+                                    <input id="pass_old" name="pass_old" type="hidden">
+                                    <div class="form-group">
                                         <div class="col-lg-offset-2 col-lg-10">
-                                            <button  class="btn btn-success">บันทึก</button>
+                                            <button  class="  btn btn-success">บันทึก</button>
                                             <button id="cancelBtn" type="button" class="btn btn-danger btn-default pull-center" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
                                         </div>
                                     </div>
-</div>
+                                </form>
                             </div>
-                        
-                    
+                        </section>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 

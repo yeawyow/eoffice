@@ -27,6 +27,7 @@ $Db->rule('usermanager');
 <script type="text/javascript">
     $(document).ready(function () {
         var t = $('#example').DataTable({
+         
             "ajax":{ 
                    "url": "modules/usermanager/default_data.php",
                     "type":"post",

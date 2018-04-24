@@ -3,13 +3,13 @@ session_start();
 include_once '../lib/config.inc.php';
 $Db = new MySqlConn;
 $Db2 = new MySqlConn2;
-$Db->rule();
+//$Db->rule();
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bootswatch: Cerulean</title>
+        <title>I-REPORT โรงพยาบาลอากาศอำนวย</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <link rel="stylesheet" href="theme/css/bootstrap31.css" media="screen">
@@ -19,7 +19,7 @@ $Db->rule();
 
 
         <script src="../includes/jquery-3.1.1.min.js"></script>
-        <script src="theme/js/bootstrap.min.js"></script>
+         <script src="../includes/bootstrap-3.3.7/js/bootstrap.min.js"></script>
         <script src="../includes/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
         <script src="../includes/bootstrap-datepicker/js/bootstrap-datepicker-thai.js"></script>
         <script src="../includes/bootstrap-datepicker/js/locales/bootstrap-datepicker.th.js" charset="UTF-8"></script>
@@ -66,22 +66,30 @@ $Db->rule();
 
                             </ul>
                         </li>
-                          <li class="dropdown">
+                        <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ศูนย์ Palliative Care <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="?m=thaimedicine&p=drug_using_herbs">รายงานผลแล็ป</a></li>
+                                <li><a href="?m=palliative&p=palliative">รายการผู้ป่วย pallaitive</a></li>
 
                                 <li role="separator" class="divider"></li>
 
                             </ul>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link" href="../">กลับสู่หน้าหลัก</a>
                         </li>
                     </ul>
-                
+
+
+
                 </div><!-- /.navbar-collapse -->
+
             </div><!-- /.container-fluid -->
+
         </nav>
+
         <div class="row">
-            <div class="container">
+            <div class="frame-main">
 
                 <?php
 // Application 
@@ -122,6 +130,12 @@ $Db->rule();
                 format: 'yyyy-mm-dd',
                 todayHighlight: true
 
+            });
+            $('.datepicker').datepicker({
+                autoclose: true,
+                language: "th-th",
+                format: 'yyyy-mm-dd',
+                todayHighlight: true
             });
         </script>
     </body>
